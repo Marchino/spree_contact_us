@@ -1,4 +1,4 @@
-Spree::Core::Engine.routes.prepend do
+Spree::Core::Engine.routes.draw do
   resources :inquiries
 
   namespace :admin do
@@ -6,5 +6,5 @@ Spree::Core::Engine.routes.prepend do
     resource :inquiry_settings
   end
 
-  match '/contact' => 'inquiries#new', :as => :contact
+  get '/contact' => 'inquiries#new', :as => :contact
 end

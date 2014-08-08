@@ -1,8 +1,8 @@
-Deface::Override.new(:virtual_path => "spree/layouts/admin",
+Deface::Override.new(:virtual_path => "spree/admin/shared/_menu",
                      :name => "spree_contact_us_inquiries_tab",
                      :original => "b14b1b16ac8937f99956ffef65de6f9c579ed1aa",
                      :insert_bottom => "[data-hook='admin_tabs']",
-                     :text => "<%= tab(:inquiries, :url => spree.admin_inquiries_path) %>",
+                     :text => "<%= tab(:inquiries, :icon => 'icon-envelope') %>",
                      :disabled => false)
 
 Deface::Override.new(:virtual_path => "spree/admin/shared/_configuration_menu",
